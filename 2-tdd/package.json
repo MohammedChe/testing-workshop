@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "ENVIRONMENT=testing jest --testTimeout=20000",
+    "test": "jest --testTimeout=20000",
     "dev": "nodemon server.js"
   },
   "author": "Mohammed Che",

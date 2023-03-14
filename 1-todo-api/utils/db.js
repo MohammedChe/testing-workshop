@@ -7,7 +7,13 @@ const connect = async () => {
     try {
         // mongoose.set('strictQuery', false);
 
-        await mongoose.connect(process.env.DB_ATLAS_URL, {
+        let dbURL = process.env.DB_ATLAS_URL;
+
+        if(process.env.ENVIRONMENT === 'testing'){
+            dbURL = process.env.TEST_DB_ATLAS_URL;
+        }
+
+        await mongoose.connect(dbURL, {
             useNewUrlParser: true,
             useUnifiedTopology: true
         });

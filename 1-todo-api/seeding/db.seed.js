@@ -1,7 +1,7 @@
 require('dotenv').config();
-const {connect, disconnect} = require("./utils/db");
-const Todo = require('./models/todo_schema');
-const User = require('./models/user_schema');
+const {connect, disconnect} = require("../utils/db");
+const Todo = require('../models/todo_schema');
+const User = require('../models/user_schema');
 
 const users = [
   {
